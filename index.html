@@ -143,10 +143,12 @@ h4{
     text-align: center;
     font-family: arial
 }
-body{
-    background: transparent
+.input1Dropdown .option{
+diplay:none;
 }
-    
+..input1Dropdown:hover .option{
+    display: block;
+}
     </style>
 </head>
 <body>
@@ -157,6 +159,15 @@ body{
 <h3> Area Key: </h3>
 <h4>B- Beach, G- Garden, P- Park </h4>
     
+
+<select id="input1Dropdown">
+    <button>Area Key</button>
+    <option value="P">P</option>
+    <option value="A">A</option>
+    <option value="B">B</option>
+    <!-- Add more options if needed -->
+</select>
+
     <!-- INPUT FIELD FOR 1 CHARACTER -->
     <input type="text" id="charInput1" maxlength="1">
     <input type="text" id="charInput2" maxlength="1">
@@ -326,6 +337,14 @@ body{
 
     <!-- Image Display Script Below -->
     <script>
+
+const input1Dropdown = document.getElementById('input1Dropdown');
+let input1_letter = input1Dropdown.value;
+input1Dropdown.addEventListener('change', () => {
+    input1_letter = input1Dropdown.value;
+    checkConditions(); // Check if the new values meet the condition
+});
+
 
         function displayImage() { 
             const imgElement = document.getElementById("displayedImage");
