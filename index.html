@@ -62,7 +62,7 @@
             height: 20%
         }
 html{
-    background: linear-gradient(to bottom, black 7%, rgb(78, 78, 78));
+    background: linear-gradient(to bottom, black 7%, rgb(78, 78, 50));
     height:200%;
     margin: 0;
     padding: 0;
@@ -144,6 +144,22 @@ h4{
     font-family: arial;
 
 }
+label{
+    color: cyan;
+    display: block;
+    position: absolute;
+    left: 50%; /* Centers the text horizontally */
+    font-size: 2rem;
+    text-align: center;
+    margin: auto; 
+           
+
+}
+
+  select {
+    margin-top: 0;         /* Optional: removes space above the dropdown */
+  }
+
     </style>
 </head>
 <body>
@@ -154,7 +170,7 @@ h4{
 <h3> Area Key: </h3>
 <h4>B- Beach, G- Garden, P- Park </h4>
     
-
+<label for="charInput1">Area Key</label>
 <select id="charInput1">
     <option value="" disabled selected></option> <!-- Placeholder text -->
     <option value="B"> Beach </option>
